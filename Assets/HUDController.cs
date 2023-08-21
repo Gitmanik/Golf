@@ -1,25 +1,24 @@
-using System;
 using TMPro;
 using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
-    [SerializeField] private TMP_Text ShotCounter;
+	[SerializeField] private TMP_Text ShotCounter;
 
-    public static HUDController Instance;
+	public static HUDController Instance;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+	private void Awake()
+	{
+		Instance = this;
+	}
 
-    public void SetShotCounter(int newvalue)
-    {
-        ShotCounter.text = "" + newvalue;
-    }
+	public void SetShotCounter(int newvalue)
+	{
+		ShotCounter.text = "" + newvalue;
+	}
 
-    public void Reset()
-    {
-        SetShotCounter(0);
-    }
+	public void Reset()
+	{
+		SetShotCounter(0);
+	}
 }

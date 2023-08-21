@@ -3,38 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
+	public static LevelManager Instance;
+	private int ShotCounter;
 
-    public Transform LevelTransform;
+	private void Awake()
+	{
+		if (Loader.Instance == null)
+		{
+			Loader.ForceLevel = SceneManager.GetActiveScene().name;
+			SceneManager.LoadScene("Loader");
+			Destroy(gameObject);
+		}
+		Instance = this;
+	}
 
-    private void Awake()
-    {
-        if (Loader.Instance == null)
-        {
-            Loader.ForceLevel = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene("Loader");
-            Destroy(gameObject);
-        }
-        Instance = this;
-    }
+	private void Start()
+	{
+		HUDController.Instance.Reset();
+	}
 
-    private void Start()
-    {
-        HUDController.Instance.Reset();
-    }
+	private void Update()
+	{
+		SetSkyboxRotation(Time.time);
+	}
 
-    private void Update()
-    {
-        SetSkyboxRotation(Time.time);
-    }
+	public void OnShot()
+	{
+		ShotCounter++;
+		HUDController.Instance.SetShotCounter(ShotCounter);
+	}
 
-    int ctr;
-
-    public void OnShot()
-    {
-        ctr++;
-        HUDController.Instance.SetShotCounter(ctr);
-    }
-
-    public void SetSkyboxRotation(float newvalue) => RenderSettings.skybox.SetFloat("_Rotation", newvalue);
+	public void SetSkyboxRotation(float newvalue) => RenderSettings.skybox.SetFloat("_Rotation", newvalue);
 }

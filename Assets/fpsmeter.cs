@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class fpsmeter : MonoBehaviour
 {
-    private TMP_Text t;
-    void Start()
-    {
-        t = GetComponent<TMP_Text>();
-    }
+	private TMP_Text t;
 
-    void Update()
-    {
-        t.text = (int) (1f / Time.deltaTime) + "FPS";
-    }
+	private void Start()
+	{
+		t = GetComponent<TMP_Text>();
+	}
+
+	private void Update()
+	{
+		t.text = (int)(1f / Time.deltaTime) + "FPS";
+	}
 }
