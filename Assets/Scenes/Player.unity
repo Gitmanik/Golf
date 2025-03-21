@@ -437,7 +437,7 @@ MonoBehaviour:
     m_Bits: 8
   ForceLineCollider: {fileID: 1001806819}
   ForceLineColliderY: -20
-  shotpower: 10
+  shotpower: 20
 --- !u!120 &482558508
 LineRenderer:
   serializedVersion: 2
