@@ -18,7 +18,7 @@ public class BallController : MonoBehaviour
 	[SerializeField] private float ForceLineColliderY = -20f;
 
 	public bool IsAiming { get; private set; }
-	public bool IsMoving => rb.velocity.magnitude > 0.025f;
+	public bool IsMoving => rb.linearVelocity.magnitude > 0.025f;
 
 	public float shotpower;
 
@@ -119,7 +119,7 @@ public class BallController : MonoBehaviour
 
 	private void StopBall()
 	{
-		rb.velocity = Vector3.zero;
+		rb.linearVelocity = Vector3.zero;
 		rb.angularVelocity = Vector3.zero;
 	}
 
