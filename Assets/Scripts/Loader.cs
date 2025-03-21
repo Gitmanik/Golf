@@ -65,6 +65,8 @@ public class Loader : MonoBehaviour
 		if (CurrentLevelIdx == Levels.Length - 1)
 			return;
 		
+		worldText.text = "";
+		
 		LoadLevel(Levels[CurrentLevelIdx + 1]);
 	}
 
