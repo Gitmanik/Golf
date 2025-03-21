@@ -23,4 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/DyniowyPoziom/DyniowyPoziom.unity
     guid: 4b61d0f2a48b8d8499b6159eff964cb1
+  - enabled: 1
+    path: Assets/Scenes/Finished.unity
+    guid: 82d8d174863ed0a88944041874e68d54
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

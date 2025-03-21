@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
 	public void OnShot()
 	{
 		ShotCounter++;
+		Loader.Instance.TotalShot++;
 		HUDController.Instance.SetShotCounter(ShotCounter);
 	}
 

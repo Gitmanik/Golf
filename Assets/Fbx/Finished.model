@@ -1,0 +1,18 @@
+# Made using Asset Forge (2.1.2)
+
+:materials
+
+[name:bricks;color:RGBA(1.000, 0.392, 0.306, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0;]
+[name:foliage;color:RGBA(0.000, 0.655, 0.486, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0;]
+
+:models
+
+[name:;collection:Golf;type:bend_open;position:(-1.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:open;position:(0.0000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:foliage+bricks;]
+[name:;collection:Golf;type:bend_open;position:(-1.0000, 0.0000, -1.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:bend_open;position:(1.0000, 0.0000, -1.0000);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:side;position:(1.0000, 0.0000, 0.0000);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:side;position:(0.0000, 0.0000, 1.0000);rotation:(0.0000, 90.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:side;position:(0.0000, 0.0000, -1.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:side;position:(-1.0000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
+[name:;collection:Golf;type:bend_open;position:(1.0000, 0.0000, 1.0000);rotation:(0.0000, 90.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:bricks+foliage;]
