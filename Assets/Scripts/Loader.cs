@@ -1,9 +1,9 @@
-using Gitmanik.Logging;
 using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class Loader : MonoBehaviour
 {
@@ -23,7 +23,6 @@ public class Loader : MonoBehaviour
 
 		Application.targetFrameRate = Screen.currentResolution.refreshRate;
 		SceneManager.LoadScene("Player", LoadSceneMode.Additive);
-		Log.Info($"Quality: {QualitySettings.names[QualitySettings.GetQualityLevel()]}, Refresh rate: {Screen.currentResolution.refreshRate}");
 		
 		worldText.text = "Welcome\nto\n<b>Gitmanik's Golf!</b>\n\n<I>Created by Pawel Reich, ~2020,2025";
 
@@ -42,7 +41,7 @@ public class Loader : MonoBehaviour
 
 	private IEnumerator IELoadLevel(string name)
 	{
-		Log.Info($"Loading Level: {name}");
+		Debug.Log($"Loading Level: {name}");
 				
 		if (name == "Finished")
 			worldText.text = $"<b>Thanks for playing!</b>\nTotal score: {TotalShot}";
@@ -77,7 +76,7 @@ public class Loader : MonoBehaviour
 
 	internal void OnFinishedLevel()
 	{
-		Log.Info("Finished level");
+		Debug.Log("Finished level");
 		StartCoroutine(WaitFinished(2f));
 	}
 
